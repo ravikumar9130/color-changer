@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qoutes GEnerator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        body{
+            background: linear-gradient(#d896ff,#f896db);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+             }
+           #pic1{
+               position: absolute;
+               top:200px;
+               left: 200px;
+           }
+           #pic2{
+               position: absolute;
+               bottom:200px;
+               right: 200px;
+           }
+           #display{
+               font-size: 1.7rem;
+               padding: 3em 10em;
+               
+           }
+           .btn{
+               border: none;
+               padding: 1em;
+               margin-top:20em;
+               position: fixed;
+               color: #fff;
+               background: linear-gradient(#f863f1,#ec6dc6);
+           }
+
+    </style>
+</head>
+
+<body>
+    <img id="pic1" src="./quotes-png-20050.png" width="60px" alt="">
+    <div id="display">
+ "CLICK CHANGE BUTTON TO GENERATE QOUTES"
+
+    </div>
+   
+    <input class="btn" type="button" onclick="change()" value="CHANGE   ">
+   <img id="pic2" src="./qoutesleft.png" width="60px" alt="">
+   <script>
+        const display = document.getElementById('display');
+
+        const qoutes = [
+            "Spread love everywhere you go.  Let no one ever come to you without leaving happier\. -Mother Teresa",
+            "When you reach the end of your rope, tie a knot in it and hang on\. -Franklin D. Roosevelt",
+            "Always remember that you are absolutely unique. Just like everyone else. \-Margaret Mead",
+            "Don't judge each day by the harvest you reap but by the seeds that you plant. \-Robert Louis Stevenson",
+            "The future belongs to those who believe in the beauty of their dreams. \-Eleanor Roosevelt",
+            "Tell me and I forget. Teach me and I remember. Involve me and I learn. -Benjamin Franklin",
+            "The best and most beautiful things in the world cannot be seen or even touched they must be felt with the heart. -Helen Keller",
+            "It is during our darkest moments that we must focus to see the light. -Aristotle",
+            "Whoever is happy will make others happy too. -Anne Frank",
+            "Do not go where the path may lead, go instead where there is no path and leave a trail. -Ralph Waldo Emerson"
+        ];
+        
+
+        function change(){
+        const randomnum=  Math.floor(Math.random()*qoutes.length);
+        display.innerHTML=qoutes[randomnum];
+        }
+    </script>
+</body>
+
+</html>
